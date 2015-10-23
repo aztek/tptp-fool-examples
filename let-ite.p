@@ -16,4 +16,4 @@ tff(12, axiom, $ite($false, i, $let(x := $false, i)) = i).
 
 tff(11, axiom, $let(f(X, Y) := X = Y, $ite(![X, Y] : f(X, Y), $true, $false))).
 tff(12, axiom, $let(f(X) := X, $ite(f(i) = i, $true, $false))).
-tff(13, axiom, $let(f(X) := $ite(X, i, i) = i, f(![X]: X = X))).
+tff(13, axiom, $let(f(X : $o) := $ite(X, i, i) = i, f(![X]: X = X))).
