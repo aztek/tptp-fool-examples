@@ -7,9 +7,9 @@ tff(6, axiom, $let(f(X : $i, Y) := X = Y, f(i, i))).
 tff(7, axiom, $let(f(X, Y : $i) := X = Y, f(i, i))).
 tff(8, axiom, $let(f(X : $i, Y : $i) := X = Y, f(i, i))).
 
-tff(9, axiom, $let(f := i; g := i, f = g)).
-tff(10, axiom, $let(f(X) := X; g(X) := X, f(i) = g(i))).
-tff(11, axiom, $let(f(X : $i) := X; g(X : $i) := X, f(x) = g(i))).
+tff(9, axiom, $let([f := i, g := i], f = g)).
+tff(10, axiom, $let([f(X) := X, g(X) := X], f(i) = g(i))).
+tff(11, axiom, $let([f(X : $i) := X, g(X : $i) := X], f(x) = g(i))).
 
 tff(12, axiom, $let_tf(f(X) := X, $true)).
 tff(13, axiom, $let_ff(f(X) := X = X, $true)).
