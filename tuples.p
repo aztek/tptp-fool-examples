@@ -1,22 +1,22 @@
-tff(a, type, a: $tType).
-tff(b, type, b: $tType).
-tff(c, type, c: $tType).
+thf(a, type, a: $tType).
+thf(b, type, b: $tType).
+thf(c, type, c: $tType).
 
-tff(t, type, t: $tuple(a, $o, b)).
+thf(t, type, t: [a, $o, b]).
 
-# $tuple() should not be allowed
-# $tuple(a) should not be allowed
+% $tuple() should not be allowed
+% $tuple(a) should not be allowed
 
-tff(f, type, f: $tuple(a, b) > $tuple(a, b)).
+thf(f, type, f: [a, b] > [a, b]).
 
-tff(1, axiom, ![T:$tuple(a, b)]: (T = f(T))).
+thf(1, axiom, ![T:[a, b]]: (T = f(T))).
 
-tff(first, axiom, ![T:$tuple(a, b)]: ($let([x, y] := T, x = x))).
+thf(first, axiom, ![T:[a, b]]: ($let([x, y] := T, x = x))).
 
-tff(x,type,x:$int).
-tff(y,type,y:$int).
+thf(x,type,x:$int).
+thf(y,type,y:$int).
 
-tff(makeXgreatest,conjecture,
+thf(makeXgreatest,conjecture,
   $let([x, y] :=
          $ite($greater(x, y),
               $let([x, y, t] := [x, y, x],
